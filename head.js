@@ -1,8 +1,6 @@
-const assertEqual = require('./assertEqual');
-
 const head = function(array) {
-  return actual[0];
+  return array[0];
 };
 
-
+//this is used for other files, do not delete
 module.exports = head;
