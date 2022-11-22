@@ -1,7 +1,14 @@
-const middle = function(array1) {
-  if(array1.length <= 2){
+const middle = function(array) {
+  if (array.length < 3) {
     return [];
-    } else if (array1.length % 2 === 0) {
-        var middle = [array1[(array1.length/2)],array1[(array1.length)/2 -1]];}
-  return middle;
-}
+  } else if (array.length % 2 === 0) {
+    return array.slice(array.length / 2 - 1, array.length / 2 + 1)
+  } else {
+     let newArray = [];
+     let middleNum = Math.round(array.length /2)
+     newArray.push(array[middleNum -1]);
+     return newArray;
+  }
+};
+
+module.exports = middle;
